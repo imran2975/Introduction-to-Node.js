@@ -13,7 +13,7 @@ const server = http.createServer((req, response) => {
             response.end(data)
         })
     } 
-    if (req.url === "/about.html") {
+    if (req.url === "/about") {
         let filePath = path.join(__dirname, 'views', "about.html")
         fs.readFile(filePath, (err, data) => {
             if(err){
@@ -23,7 +23,7 @@ const server = http.createServer((req, response) => {
             response.end(data)
         })
     } 
-    if (req.url === "/contact.html") {
+    if (req.url === "/contact") {
         let filePath = path.join(__dirname, 'views', "contact.html")
         fs.readFile(filePath, (err, data) => {
             if(err){
